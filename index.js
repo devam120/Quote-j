@@ -17,7 +17,7 @@ function complete() {
     }
 }
 async function getQuote() {
-    loading()
+    loading();
     const url = "https://api.quotable.io/random";
     try {
         const r = await fetch(url);
@@ -34,7 +34,7 @@ async function getQuote() {
             quoteContent.classList.remove("long-quote");
         }
         quoteContent.innerText = data.content;
-        complete()
+        complete();
     } catch (e) {
         console.log(Error);
     }
